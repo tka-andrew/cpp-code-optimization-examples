@@ -6,6 +6,7 @@
 
 #include "simpleProfilingTemplate.h"
 #include "testLoopUnrolling.h"
+#include "testDeadCode.h"
 
 int main() {
 
@@ -23,5 +24,8 @@ int main() {
 
 	// test: loop unrolling
     simpleProfilingTemplate(&testLoopUnrolling, &testLoopUnrollingOptimized, iterations, "Loop Unrolling");
+
+	// test: dead code
+    simpleProfilingTemplate(&testDeadCode, &testDeadCodeOptimized, iterations, "Dead Code");
 
 }
