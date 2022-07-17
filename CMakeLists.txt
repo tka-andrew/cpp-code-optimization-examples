@@ -8,6 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(Sources
     src/main.cpp
+    src/simpleProfilingTemplate.cpp
     src/testLoopUnrolling.cpp
 )
 
