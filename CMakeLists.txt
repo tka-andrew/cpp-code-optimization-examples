@@ -11,6 +11,7 @@ set(Sources
     src/simpleProfilingTemplate.cpp
     src/testLoopUnrolling.cpp
     src/testDeadCode.cpp
+    src/testRedundantCode.cpp
 )
 
 # add the executable

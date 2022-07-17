@@ -7,6 +7,7 @@
 #include "simpleProfilingTemplate.h"
 #include "testLoopUnrolling.h"
 #include "testDeadCode.h"
+#include "testRedundantCode.h"
 
 int main() {
 
@@ -27,5 +28,8 @@ int main() {
 
 	// test: dead code
     simpleProfilingTemplate(&testDeadCode, &testDeadCodeOptimized, iterations, "Dead Code");
+
+	// test: redundant code
+    simpleProfilingTemplate(&testRedundantCode, &testRedundantCodeOptimized, iterations, "Redundant Code");
 
 }
