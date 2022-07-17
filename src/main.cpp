@@ -8,6 +8,7 @@
 #include "testLoopUnrolling.h"
 #include "testDeadCode.h"
 #include "testRedundantCode.h"
+#include "testIfStatements.h"
 
 int main() {
 
@@ -31,5 +32,8 @@ int main() {
 
 	// test: redundant code
     simpleProfilingTemplate(&testRedundantCode, &testRedundantCodeOptimized, iterations, "Redundant Code");
+
+	// test: if statements
+    simpleProfilingTemplate(&testIfStatements, &testIfStatementsOptimized, iterations, "If Statements");
 
 }

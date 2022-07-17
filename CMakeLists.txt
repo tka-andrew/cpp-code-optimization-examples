@@ -12,6 +12,7 @@ set(Sources
     src/testLoopUnrolling.cpp
     src/testDeadCode.cpp
     src/testRedundantCode.cpp
+    src/testIfStatements.cpp
 )
 
 # add the executable
