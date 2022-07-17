@@ -13,6 +13,7 @@ set(Sources
     src/testDeadCode.cpp
     src/testRedundantCode.cpp
     src/testIfStatements.cpp
+    src/testUnnecessaryNestedLoop.cpp
 )
 
 # add the executable

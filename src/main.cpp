@@ -1,7 +1,4 @@
 #include <iostream>
-#include <cstdio>
-#include <vector>
-#include <string>
 #include <iomanip>
 
 #include "simpleProfilingTemplate.h"
@@ -9,6 +6,7 @@
 #include "testDeadCode.h"
 #include "testRedundantCode.h"
 #include "testIfStatements.h"
+#include "testUnnecessaryNestedLoop.h"
 
 int main() {
 
@@ -35,5 +33,8 @@ int main() {
 
 	// test: if statements
     simpleProfilingTemplate(&testIfStatements, &testIfStatementsOptimized, iterations, "If Statements");
+
+	// test: unnecessary nested loop
+    simpleProfilingTemplate(5, 5, &testUnnecessaryNestedLoop, &testUnnecessaryNestedLoopOptimized, iterations, "Unnecessary Nested Loop");
 
 }
