@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include <vector>
 
 #include "simpleProfilingTemplate.h"
 #include "testLoopUnrolling.h"
@@ -8,6 +9,7 @@
 #include "testIfStatements.h"
 #include "testUnnecessaryNestedLoop.h"
 #include "testReserveVectorMemory.h"
+#include "testPassByReference.h"
 
 int main() {
 
@@ -40,5 +42,9 @@ int main() {
 
 	// test: reserve vector memory
     simpleProfilingTemplate(&testReserveVectorMemory, &testReserveVectorMemoryOptimized, iterations, "Reserve Vector Memory");
+
+    // test: pass by reference
+    std::vector<int> v(50,1);
+    simpleProfilingTemplate(v, &testPassByReference, &testPassByReferenceOptimized, iterations, "Pass By Reference");
 
 }
