@@ -16,6 +16,7 @@ set(Sources
     src/testUnnecessaryNestedLoop.cpp
     src/testReserveVectorMemory.cpp
     src/testPassByReference.cpp
+    src/testStaticLocalVariable.cpp
 )
 
 # add the executable

@@ -10,6 +10,7 @@
 #include "testUnnecessaryNestedLoop.h"
 #include "testReserveVectorMemory.h"
 #include "testPassByReference.h"
+#include "testStaticLocalVariable.h"
 
 int main() {
 
@@ -46,5 +47,10 @@ int main() {
     // test: pass by reference
     std::vector<int> v(50,1);
     simpleProfilingTemplate(v, &testPassByReference, &testPassByReferenceOptimized, iterations, "Pass By Reference");
+
+	// test: static local variable
+    int x1 = 1;
+    int x2 = 1;
+    simpleProfilingTemplate(x1, x2, &testStaticLocalVariable, &testStaticLocalVariableOptimized, iterations, "Static Local Variable");
 
 }
