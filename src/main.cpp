@@ -7,6 +7,7 @@
 #include "testRedundantCode.h"
 #include "testIfStatements.h"
 #include "testUnnecessaryNestedLoop.h"
+#include "testReserveVectorMemory.h"
 
 int main() {
 
@@ -36,5 +37,8 @@ int main() {
 
 	// test: unnecessary nested loop
     simpleProfilingTemplate(5, 5, &testUnnecessaryNestedLoop, &testUnnecessaryNestedLoopOptimized, iterations, "Unnecessary Nested Loop");
+
+	// test: reserve vector memory
+    simpleProfilingTemplate(&testReserveVectorMemory, &testReserveVectorMemoryOptimized, iterations, "Reserve Vector Memory");
 
 }

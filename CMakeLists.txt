@@ -14,6 +14,7 @@ set(Sources
     src/testRedundantCode.cpp
     src/testIfStatements.cpp
     src/testUnnecessaryNestedLoop.cpp
+    src/testReserveVectorMemory.cpp
 )
 
 # add the executable
