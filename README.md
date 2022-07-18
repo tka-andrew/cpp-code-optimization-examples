@@ -3,11 +3,12 @@ This is a simple project that contains some sample codes to demonstrate the c++ 
 
 ## RUNNING ON LOCAL MACHINE
 
-### CMake and build
+### CMake, build and then run the executable
 In this directory
 ```
 mkdir build
 cd build
 cmake ..
 cmake --build .
+./CppCodeOptimizationExamples
 ```
